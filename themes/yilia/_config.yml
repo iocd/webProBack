@@ -59,10 +59,10 @@ open_in_new: true
 # Miscellaneous
 baidu_analytics: 'a30844fa2bcbce0a9e001fe06cefeddf'
 google_analytics: false
-favicon: ../assets/img/favicon.ico
+favicon: /assets/img/favicon.ico
 
 #头像
-avatar: ../assets/img/touxiang.png
+avatar: /assets/img/touxiang.png
 
 #是否开启分享
 share_jia: true

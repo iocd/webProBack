@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "yilia 主题的配置使用"
+title: "yilia主题的配置使用"
 date: 2021-9-6 14:56
 comments: true
 toc: true
@@ -8,9 +8,10 @@ reward: true
 tags: 
 	- web
 	- 博客
+typora-root-url: ..
 ---
 
-## yilia 主题的配置使用
+## yilia主题的配置使用
 
 主要为了在 github page 发布静态网页的博客。写的是md笔记，用hexo编译后就是静态网页了，yilia 之类的主题是可选使用
 
@@ -87,7 +88,7 @@ tags:
 	- 博客
 ```
 
-![image-20210906184554990](../assets/blogimg/image-20210906184554990.png)
+![image-20210906184554990](/assets/blogimg/yilia主题的配置使用/image-20210906184554990.png)
 
 5.编译测试发布
 
@@ -145,7 +146,7 @@ rss: /atom.xml
 # 是否需要修改 root 路径
 # 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，
 # 请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。
-root: 
+
 
 # Content
 excerpt_link: 'more'
@@ -177,10 +178,10 @@ open_in_new: true
 # Miscellaneous
 baidu_analytics: 'a30844fa2bcbce0a9e001fe06cefeddf'
 google_analytics: false
-favicon: ../assets/img/favicon.ico
+favicon: /assets/img/favicon.ico
 
-#你的头像url
-avatar: ../assets/img/touxiang.png
+#头像
+avatar: /assets/img/touxiang.png
 
 #是否开启分享
 share_jia: true
@@ -234,15 +235,16 @@ friends:
 
 
 aboutme: 红叶，<br>毕业于华科，就职于鹅厂<br><br>热爱大海与冷笑话，<br/>目前是一枚前端<br/><br/>胆小认生，不易相处，<br>年轻无为，卖马为生。
+
 ```
 
+关于路劲问题：[typora + hexo博客中插入图片](https://blog.csdn.net/qq_32623363/article/details/100524856)
 
+设置如下
 
-测试：
+<img src="/assets/blogimg/yilia主题的配置使用/typora插入图片.png" alt="typora插入图片" style="zoom:80%;" />
 
-下面这张是站内的图（相对路径）
-
-![btb](../assets/blogimg/btb.jpg)
+<img src="/assets/blogimg/yilia主题的配置使用/typora-格式-img根目录.png" alt="typora-格式-img根目录" style="zoom: 80%;" />
 
 
 
