@@ -4,6 +4,7 @@
 menu:
   主页: /
   相册: /photos
+  png: /assets
 
 # SubNav
 subnav:
