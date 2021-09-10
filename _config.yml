@@ -17,7 +17,7 @@ timezone: 'Asia/Shanghai'
 #url: http://example.com
 # url: https://zilv.icu/blogs
 # root: /blogs/
-url: https://zilv.icu/blogs
+url: https://zilv.icu/blogs/blogs
 root: /blogs/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
