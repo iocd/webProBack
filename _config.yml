@@ -6,19 +6,14 @@
 title: 红叶的博客
 subtitle: 胆小认生，不易相处
 description: 此为博客一枚0
-keywords: fftghrf0
+keywords:
 author: 红叶
-
 language: en
-timezone: 'Asia/Shanghai'
+timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-#url: http://example.com
-# url: https://zilv.icu/blogs
-# root: /blogs/
-url: https://zilv.icu/blogs/blogs
-root: /blogs/
+url: https://zilv.icu/blogs
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
