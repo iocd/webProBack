@@ -281,7 +281,7 @@ subnav:
   #twitter: "#"
   #linkedin: "#"
 
-rss: /atom.xml
+rss: /blogs/atom.xml
 
 # 是否需要修改 root 路径
 # 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，
@@ -385,7 +385,6 @@ friends:
   冯兆峯: http://blog.csdn.net/zffenger
 
 aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
-
 ```
 
 关于路劲问题：[typora + hexo博客中插入图片](https://blog.csdn.net/qq_32623363/article/details/100524856)
