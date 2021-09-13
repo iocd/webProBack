@@ -8,7 +8,7 @@ reward: true
 tags: 
 	- web
 	- 博客
-typora-root-url: ..
+typora-root-url: ..\..
 ---
 
 ## yilia主题的配置使用
@@ -114,28 +114,168 @@ smart_menu:
 
 
 
+**`_config.yml`** 
+
+```yaml
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 红叶的博客
+subtitle: 胆小认生，不易相处
+description: 此为博客一枚0
+keywords:
+author: 红叶
+language: en
+timezone: ''
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://zilv.icu/blogs
+root: /blogs/
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: blogs # 因为博客在站点子目录（/blogs/）下，所以这里吧工程目录设置为md图片根目录
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: yilia
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+# 自动部署 public 目录到博客地址，hexo d
+# npm install -g hexo-deployer-git --save
+deploy:
+  type: git
+  repo: git@github.com:iocd/blogs.git
+  branch: master
+
+# 标签生成
+# npm i hexo-generator-json-content --save
+jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: false
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+```
+
+
+
 **`themes/yilia/_config.yml`** 
 
 ```yaml
 # Header
-# 不需要使用某项，直接设置值为false，或注释掉
 
 menu:
   主页: /
   相册: /photos
+  #随笔: /tags/随笔/
 
 # SubNav
 subnav:
   github: "https://github.com/iocd"
   #weibo: "#"
-  rss: /atom.xml
+  rss: /blogs/atom.xml
   #psn: "#"
-  #zhihu: "#"
+  #qq: "#"
+  #weixin: "#"
+  #jianshu: "#"
   #douban: "#"
   #segmentfault: "#"
   #bilibili: "#"
   #acfun: "#"
-  #mail: "mailto:1234@qq.com"
+  #mail: "mailto:litten225@qq.com"
   #facebook: "#"
   #google: "#"
   #twitter: "#"
@@ -149,17 +289,25 @@ rss: /atom.xml
 
 
 # Content
-excerpt_link: 'more'
+
+# 文章太长，截断按钮文字
+excerpt_link: more
+# 文章卡片右下角常驻链接，不需要请设置为false
 show_all_link: '展开全文'
-fancybox: true
+# 数学公式
 mathjax: false
+# 是否在新窗口打开链接
+open_in_new: false
 
 # 打赏
 # 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
-reward_type: 1
+reward_type: 2
+# 打赏wording
 reward_wording: '谢谢你请我吃糖果'
-alipay: /assets/img/alipay.jpg
-weixin: /assets/img/weixin.jpg
+# 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
+# 微信二维码图片地址
+alipay: /blogs/assets/img/alipay.jpg
+weixin: /blogs/assets/img/weixin.jpg
 
 # 目录
 # 目录设定：0-不显示目录； 1-文章对应的md文件里有toc:true属性，才有目录； 2-所有文章均显示目录
@@ -172,38 +320,40 @@ toc_empty_wording: '目录，不存在的…'
 # 是否有快速回到顶部的按钮
 top: true
 
-# 是否在新窗口打开链接
-open_in_new: true
-
 # Miscellaneous
-baidu_analytics: 'a30844fa2bcbce0a9e001fe06cefeddf'
-google_analytics: false
-favicon: /assets/img/favicon.ico
+baidu_analytics: ''
+google_analytics: ''
+favicon: /blogs/assets/img/favicon.ico
 
 #头像
-avatar: /assets/img/touxiang.png
+avatar: /blogs/assets/img/touxiang.png
 
 #是否开启分享
 share_jia: true
 
-mobile:
-  social: true
-
-#评论：1、多说；2、网易云跟帖；3、畅言；4、Disqus 不需要使用某项，直接设置值为false，或注释掉
-#请参考wiki：
+#评论：1、多说；2、网易云跟帖；3、畅言；4、Disqus；5、Gitment
+#不需要使用某项，直接设置值为false，或注释掉
+#具体请参考wiki：https://github.com/litten/hexo-theme-yilia/wiki/
 
 #1、多说
-#duoshuo: "litten-hexo"
+duoshuo: false
 
 #2、网易云跟帖
-#wangyiyun: '2dba06fbf8d24c13915ea6c6aa7183b1'
+wangyiyun: false
 
 #3、畅言
-changyan_appid: 'cysX3aGWt'
-changyan_conf: 'prod_1dcda447175aada96edcdb7e412338fa'
+changyan_appid: false
+changyan_conf: false
 
 #4、Disqus 在hexo根目录的config里也有disqus_shortname字段，优先使用yilia的
 disqus: false
+
+#5、Gitment
+gitment_owner: false      #你的 GitHub ID
+gitment_repo: ''          #存储评论的 repo
+gitment_oauth:
+  client_id: ''           #client ID
+  client_secret: ''       #client secret
 
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
@@ -217,13 +367,14 @@ slider:
   # 是否默认展开tags板块
   showTags: false
 
-# 如不需要，将该项置为false
+# 智能菜单
+# 如不需要，将该对应项置为false
 # 比如
 #smart_menu:
 #  friends: false
 smart_menu:
   innerArchive: '所有文章'
-  friends: '友情链接'
+  friends: '友链'
   aboutme: '关于我'
 
 friends:
@@ -233,8 +384,7 @@ friends:
   闻波: http://www.cnblogs.com/webary/
   冯兆峯: http://blog.csdn.net/zffenger
 
-
-aboutme: 红叶，<br>毕业于华科，就职于鹅厂<br><br>热爱大海与冷笑话，<br/>目前是一枚前端<br/><br/>胆小认生，不易相处，<br>年轻无为，卖马为生。
+aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
 
 ```
 
@@ -248,17 +398,13 @@ aboutme: 红叶，<br>毕业于华科，就职于鹅厂<br><br>热爱大海与�
 
 
 
-下面这张是网上的图（外链）
-
-![img](https://www.baidu.com/img/flexible/logo/pc/result.png)
+注意：部署有延时，hexo中有某个js访问超过21s，导致打开慢
 
 
 
 先到这里吧。。。那天再续上
 
-注意：
-图片不能缩放（缩放的会变成 <img src="..."> 标签，链接含中文没被url编码）
 
-图片尽量不有中文名（含中文也url编码了，但是链接地址再GitHub上，打开太快不可用，部署有延时）
+
 
 
