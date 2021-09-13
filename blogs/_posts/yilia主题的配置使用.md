@@ -19,13 +19,14 @@ typora-root-url: ..\..
 
 #### 一、先安装软件
 
+<!-- more -->
+
 注意：nodejs 的16.8.0版本在win11上，`npm install` 会报错，建议先安装低一点的版本尝试。
 
 | 下载                                 | 安装                                                         | 备注                                     |
 | ------------------------------------ | ------------------------------------------------------------ | ---------------------------------------- |
 | [Python](https://www.python.org/)    | [在windows下安装Python(Python入门教程)](https://my.oschina.net/u/3704591/blog/4566022) | nodejs依赖python                         |
 | [nodejs](http://nodejs.cn/download/) | [npm安装教程](https://www.cnblogs.com/lgx5/p/10732016.html)  | npm依赖于nodejs。`npm install`能使用即可 |
-|                                      |                                                              |                                          |
 
 
 
