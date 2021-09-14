@@ -223,7 +223,7 @@ theme: yilia
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 # 自动部署 public 目录到博客地址，hexo d
-# npm install -g hexo-deployer-git --save
+# rm -rf .deploy_git && npm install hexo-deployer-git --save
 deploy:
   type: git
   repo: git@github.com:iocd/blogs.git
