@@ -392,11 +392,11 @@ aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
 
 设置如下
 
-![image-20210906184554990](/blogs/assets/blogimg/yilia主题的配置使用/typora1.png)
+![typora图片根目录1](/blogs/assets/blogimg/yilia主题的配置使用/typora图片根目录1.png)
 
-![image-20210906184554990](/blogs/assets/blogimg/yilia主题的配置使用/typora2.png)
+![typora图片根目录2](/blogs/assets/blogimg/yilia主题的配置使用/typora图片根目录2.png)
 
-
+根目录选 blogs 目录，source改成blogs的，因为博客在网站子目录下面 https://zilv.icu/blogs/
 
 注意：部署有延时，hexo中有某个js访问超过21s，导致打开慢
 
