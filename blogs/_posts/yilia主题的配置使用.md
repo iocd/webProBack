@@ -8,7 +8,7 @@ reward: true
 tags: 
 	- web
 	- 博客
-typora-root-url: ..\..
+typora-root-url: ..
 ---
 
 ## yilia主题的配置使用
@@ -133,7 +133,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://zilv.icu/blogs
+url: https://dtos.ltd/blogs
 root: /blogs/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -396,13 +396,23 @@ aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
 
 ![typora图片根目录2](/blogs/assets/blogimg/yilia主题的配置使用/typora图片根目录2.png)
 
-根目录选 blogs 目录，source改成blogs的，因为博客在网站子目录下面 https://zilv.icu/blogs/
+`偏好设置`-`图像` -> **指定路径**和**优先使用相对路径**，：
+
+`../../blogs/assets/blogimg/${filename}`
+
+图片根目录选 blogs 目录，md里图片路径是这样的：
+
+`/blogs/assets/blogimg/yilia主题的配置使用/typora图片根目录2.png`
+
+source改成blogs的子目录，因为博客在网站子目录下面 https://dtos.ltd/blogs/
+
+
 
 注意：部署有延时，hexo中有某个js访问超过21s，导致打开慢
 
 
 
-先到这里吧。。。那天再续上
+先到这里吧。。。哪天再续上
 
 
 
